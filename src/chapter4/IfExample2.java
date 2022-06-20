@@ -3,7 +3,7 @@ package chapter4;
 public class IfExample2 {
 
 	public static void main(String[] args) {
-		int age = 9;
+		int age = 77;
 		int charge;
 		
 		if(age < 8) {
@@ -14,11 +14,15 @@ public class IfExample2 {
 			charge = 2500;
 			System.out.println("초등학생입니다.");
 		}
+		if(age >= 60) {
+			charge = 0;
+			System.out.println("경로우대입니다.");
+		}
 		else {
 			charge = 3000;
 			System.out.println("일반인입니다.");
 		}
-		System.out.println("입장료는" + charge + "원입니다.");
+		System.out.println("입장료는 " + charge + "원입니다.");
 	}
 
 }
