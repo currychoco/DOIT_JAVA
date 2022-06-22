@@ -7,7 +7,7 @@ public class CardCompany {
 	
 	public static CardCompany getInstance() {
 		if(instance == null) {
-			CardCompany instance = new CardCompany();
+			instance = new CardCompany();
 		}
 		return instance;
 	}
