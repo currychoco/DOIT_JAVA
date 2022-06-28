@@ -25,6 +25,12 @@ class MyDate{
 			return false;
 		}
 	}
+	
+	@Override
+	public int hashCode() {
+	
+		return day * 10 + month * 101 + year * 102;
+	}
 }
 
 public class AloneTest {
@@ -37,6 +43,10 @@ public class AloneTest {
 		
 		System.out.println(myd1.equals(myd2));
 		System.out.println(myd1.equals(myd3));
+		
+		System.out.println(myd1.hashCode());
+		System.out.println(myd2.hashCode());
+		System.out.println(myd3.hashCode());
 
 	}
 

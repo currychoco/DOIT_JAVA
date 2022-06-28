@@ -4,6 +4,11 @@ class Student{
 	int studentID;
 	String studentName;
 	
+	@Override
+	public int hashCode() {
+		return studentID;
+	}
+	
 	Student(int studentID, String studentName){
 		this.studentID = studentID;
 		this.studentName = studentName;
@@ -53,18 +58,24 @@ public class EqualsTest {
 		}
 		
 		if(studentLee == studentSang) {
-			System.out.println("studentLee와 studentLee2의 주소는 같습니다.");
+			System.out.println("studentLee와 studentSang의 주소는 같습니다.");
 		}
 		else {
-			System.out.println("studentLee와 studentLee2의 주소는 다릅니다.");
+			System.out.println("studentLee와 studentSang의 주소는 다릅니다.");
 		}
 		
 		if(studentLee.equals(studentSang)) {
-			System.out.println("studentLee와 studentLee2은 동일합니다.");
+			System.out.println("studentLee와 studentSang은 동일합니다.");
 		}
 		else {
-			System.out.println("studentLee와 studentLee2은 동일하지 않습니다");
+			System.out.println("studentLee와 studentSang은 동일하지 않습니다");
 		}
+		
+		System.out.println("studentLee의 hashCode : " + studentLee.hashCode());
+		System.out.println("studentSang의 hashCode : " + studentSang.hashCode());
+		
+		System.out.println("studentLee의 실제 주소값 : " + System.identityHashCode(studentLee));
+		System.out.println("studentSang의 실제 주소값 : " + System.identityHashCode(studentSang));
 
 	}
 
